@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+    {% block title %}
+      welcome
+    {% endblock %}
+    </title>
+  </head>
+  <body>
+    <h1>WELCOME</h1>
+    <div id="content"> {% block content %} {% endblock %} </div>
+    {% if username %}
+    <div>[{{ username }}] <a href="/logout">Logout</a></div>
+    {% else %}
+    <div>[Anonymous] <a href="/">Login</a></div>
+    {% endif %}
+  </body>
+</html>
